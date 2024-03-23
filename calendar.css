@@ -1,0 +1,123 @@
+html {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.4;
+    font-weight: 500;
+    color: #333333; 
+}
+
+body {
+    min-height: 200vh;
+    background: #E8F0FE; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+header{
+    color: #007BFF; 
+    background-color: #FFFFFF;
+    border: 3px solid #007BFF;
+    border-radius: 50%;
+    border-style: double;
+    margin: 1em;
+    padding: 2em;
+}
+
+main {
+    background-color: #FFFFFF;
+    border: 3px solid #007BFF;
+    border-radius: 50%;
+    border-style: dotted;
+    margin: 1em;
+    padding: 5em;
+}
+main2{
+    color: #007BFF;
+}
+
+@media (min-width: 768px) {
+   .content-wrapper {
+        flex-direction: row;
+    }
+    main {
+        width: calc(50% - 1em);
+        border-radius: 50%;
+    }
+}
+
+
+@keyframes multibackground {
+  0%   {background-color: #fff6c2;}
+  25%  {background-color: #f0df48;}
+  50%  {background-color: #ccec3a;}
+  75%  {background-color: #2df17f;}
+  100% {background-color: #8ff1d9;}
+}
+
+.calendar {
+  background-color: #47f0e7;
+  animation-name: multibackground;
+  animation-duration: 4s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear; 
+  border-radius: 50%; 
+}
+
+.month-indicator {
+    color: #007BFF;
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px; 
+}
+
+.day-of-week, .date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-weight: 600;
+    font-size: 25px; 
+}
+
+.day-of-week > *, .date-grid button {
+    text-align: center;
+    color: #007BFF;
+}
+
+.date-grid button {
+    position: relative;
+    border: 0;
+    width: 100%; 
+    height: 3em; 
+    padding-bottom: 0%; 
+    border-radius: 40%;
+    background-color: transparent;
+    color: #007BFF;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-grid button:focus {
+    outline: none;
+}
+
+
+.date-grid button:hover, .date-grid button:focus {
+    background-color: #007BFF;
+    color: black;
+    cursor: pointer ;
+}
+
+.date-grid button:active {
+    background-color: #fff6c2; 
+    color: black;
+}
+
